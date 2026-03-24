@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>lecture_02</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>lecture_04</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7517,7 +7517,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1><span fontsize="500" style="color:darkblue"> Lecture 2: Introduction to Jupyter Notebooks </span></h1>
+<h1 id="-Lecture-4:-Objects,-Variables,-and-Lists-"><span style="color:red"> Lecture 4: Objects, Variables, and Lists </span><a class="anchor-link" href="#-Lecture-4:-Objects,-Variables,-and-Lists-">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7529,33 +7529,11 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <font size="5">
-<p>The basic structure for running Python for data projects
-<img alt="drawing" src="figures/project_flow.png" width="650"/></p>
+<p>In this notebook we will:</p>
 <ul>
-<li>Python is a general purpose language</li>
-<li>Researchers and practitioners add new functionalities all the time</li>
-<li>New features are included as libraries on top of the "basic" installation</li>
-</ul>
-<hr/>
-</font></div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="-STEP-0:-Preliminaries-"><span style="color:darkblue"> STEP 0: Preliminaries </span><a class="anchor-link" href="#-STEP-0:-Preliminaries-">¶</a></h1><font size="5">
-<ul>
-<li><p>A Virtual Environment is an isolated <strong>directory/workspace</strong> (folder in your computer) <br/>
-that contains a specific <strong>collection of packages</strong></p>
-</li>
-<li><p>A package is a folder containing a set of Python scripts or <br/>
-modules which allow you to accomplish a defined task <br/>
-(visualization, analysis, mathematical operations, etc.)</p>
-</li>
+<li>Introduce "objects" and their corresponding data types</li>
+<li>Learn how to assign values to <strong>variables</strong></li>
+<li>Cover <strong>lists</strong> - which are collections of objects</li>
 </ul>
 </font></div>
 </div>
@@ -7567,20 +7545,7 @@ modules which allow you to accomplish a defined task <br/>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p>To manage packages open "Anaconda Navigator" on your <br/>
-computer and go to the "Environment" Tab</p>
-</font></div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="drawing" src="figures/anaconda_navigator_installed.png" width="650"/></p>
+<h1 id="-1.-Objects-and-Data-Types-"><span style="color:red"> 1. Objects and Data Types </span><a class="anchor-link" href="#-1.-Objects-and-Data-Types-">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7591,54 +7556,12 @@ computer and go to the "Environment" Tab</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p>In the future, as your data analysis needs expand, <br/>
-you way want to click on the "Not installed" packages <br/>
-to download cool new packages!</p>
-</font></div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="drawing" src="figures/anaconda_navigator_notinstalled.png" width="650"/></p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p>Note: Anaconda does not list the default packages in <br/>
-Python's <strong>standard</strong> library.  You have access to these too!<br/>
-See <a href="https://docs.python.org/3/library/index.html">The Python Standard Library</a> to see what's included.</p>
-</font></div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="-STEP-1:-Setup-Working-Environment-"><span style="color:darkblue"> STEP 1: Setup Working Environment </span><a class="anchor-link" href="#-STEP-1:-Setup-Working-Environment-">¶</a></h1><font size="5">
-<p>(a) Double Check that Python is linked to VS Code</p>
-<p><img alt="drawing" src="figures/python_kernel.png" width="650"/></p>
-<ul>
-<li>If not already linked, it will say "Select Kernel"</li>
-<li>Click button, choose "Python Environments", then select <br/>
-the version of Python that contains the word "anaconda"</li>
+<h2 id="Almost-everything-in-Python-is-an-%22object%22">Almost everything in Python is an "object"<a class="anchor-link" href="#Almost-everything-in-Python-is-an-%22object%22">¶</a></h2><ul>
+<li><h3 id="The-built-in-number-%22-3-%22-is-an-object">The built-in number " 3 " is an object<a class="anchor-link" href="#The-built-in-number-%22-3-%22-is-an-object">¶</a></h3></li>
+<li><h3 id="The-phrase-%22-%22Hello-World!%22-%22-is-an-object.-(The-number-of-quotation-marks-I-typed-is-intentional)">The phrase " "Hello World!" " is an object. (The number of quotation marks I typed is intentional)<a class="anchor-link" href="#The-phrase-%22-%22Hello-World!%22-%22-is-an-object.-(The-number-of-quotation-marks-I-typed-is-intentional)">¶</a></h3></li>
+<li><h3 id="Each-object-has-a-type-(or-a-class)">Each object has a <strong>type</strong> (or a <strong>class</strong>)<a class="anchor-link" href="#Each-object-has-a-type-(or-a-class)">¶</a></h3></li>
 </ul>
-</font></div>
+</div>
 </div>
 </div>
 </div>
@@ -7648,12 +7571,13 @@ the version of Python that contains the word "anaconda"</li>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p>(b) Try some basic Python commands</p>
-<ul>
-<li>use "print" to display a message and some basic calculations</li>
+<h3 id="Some-common-object-types-are">Some common object types are<a class="anchor-link" href="#Some-common-object-types-are">¶</a></h3><ul>
+<li><h3 id="Integers-(int):-%22Whole-numbers%22-including-zero-and-negatives">Integers (int): "Whole numbers" including zero and negatives<a class="anchor-link" href="#Integers-(int):-%22Whole-numbers%22-including-zero-and-negatives">¶</a></h3></li>
+<li><h3 id="Floating-point-numbers-(float):-Numbers-with-decimals">Floating-point numbers (float): Numbers with decimals<a class="anchor-link" href="#Floating-point-numbers-(float):-Numbers-with-decimals">¶</a></h3></li>
+<li><h3 id="Strings-(str):-A-sequence-of-characters-representing-text.">Strings (str): A sequence of characters representing text.<a class="anchor-link" href="#Strings-(str):-A-sequence-of-characters-representing-text.">¶</a></h3></li>
 </ul>
-</font></div>
+<h3 id="We-can-use-the-built-in-Python-function-%22type%22-to-see-what-an-object's-type-is.-We-pass-the-object-as-an-%22argument%22-(or-input)-to-the-function.">We can use the built-in Python function "type" to see what an object's type is. We pass the object as an "argument" (or input) to the function.<a class="anchor-link" href="#We-can-use-the-built-in-Python-function-%22type%22-to-see-what-an-object's-type-is.-We-pass-the-object-as-an-%22argument%22-(or-input)-to-the-function.">¶</a></h3>
+</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
@@ -7664,12 +7588,126 @@ the version of Python that contains the word "anaconda"</li>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"2 + 3"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># 2 raised to the third power</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">))</span> <span class="c1"># absolute value of -5</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>int</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">3.25</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>float</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>str</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Use-the-%22print%22-function-if-you-want-a-single-code-cell-to-print-out-multiple-things:">Use the "print" function if you want a single code cell to print out multiple things:<a class="anchor-link" href="#Use-the-%22print%22-function-if-you-want-a-single-code-cell-to-print-out-multiple-things:">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># doesn't get printed</span>
+<span class="nb">type</span><span class="p">(</span><span class="mf">3.25</span><span class="p">)</span> <span class="c1"># doesn't get printed</span>
+<span class="nb">type</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span> <span class="c1"># gets printed</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>str</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">3.25</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -7682,12 +7720,9 @@ the version of Python that contains the word "anaconda"</li>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Hello World!
-5
-2 + 3
-12
-8
-5
+<pre>&lt;class 'int'&gt;
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;
 </pre>
 </div>
 </div>
@@ -7700,7 +7735,7 @@ the version of Python that contains the word "anaconda"</li>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Let's-try-and-compute-$%5Clog_2(8)$-(which-equals-3).">Let's try and compute $\log_2(8)$ (which equals 3).<a class="anchor-link" href="#Let's-try-and-compute-$%5Clog_2(8)$-(which-equals-3).">¶</a></h3><h3 id="We-will-get-our-first-error-message!">We will get our first error message!<a class="anchor-link" href="#We-will-get-our-first-error-message!">¶</a></h3>
+<h4 id="(but-the-formatting-of-the-printing-might-be-a-little-different)">(but the formatting of the printing might be a little different)<a class="anchor-link" href="#(but-the-formatting-of-the-printing-might-be-a-little-different)">¶</a></h4>
 </div>
 </div>
 </div>
@@ -7709,10 +7744,538 @@ the version of Python that contains the word "anaconda"</li>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">log2</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># You can define strings with either single or double quotations.</span>
+<span class="nb">type</span><span class="p">(</span><span class="s1">'Hello World!'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>str</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># But you can't mix single and double quotes:</span>
+<span class="nb">type</span><span class="p">(</span><span class="s1">'Hello World!")</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+  <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[7]</span><span class="ansi-green-fg">, line 2</span>
+<span class="ansi-red-fg">    </span><span class="ansi-red-fg">type('Hello World!")</span>
+         ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> unterminated string literal (detected at line 2)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># The flexibility of using either single or double quotes is useful when you want to include </span>
+<span class="c1"># a quote character inside a string.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Today's lecture is about Jupyter notebooks."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'In Python, "classes" and "types" are essentially synonymous.'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span> <span class="c1"># prints a blank line</span>
+<span class="c1"># use both single and double quotes in the same string by adding a backslash in front</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'In today</span><span class="se">\'</span><span class="s1">s lecture we learned that "classes" and "types" are essentially synonymous.'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"In today's lecture we learned that </span><span class="se">\"</span><span class="s2">classes</span><span class="se">\"</span><span class="s2"> and </span><span class="se">\"</span><span class="s2">types</span><span class="se">\"</span><span class="s2"> are essentially synonymous."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Today's lecture is about Jupyter notebooks.
+In Python, "classes" and "types" are essentially synonymous.
+
+In today's lecture we learned that "classes" and "types" are essentially synonymous.
+In today's lecture we learned that "classes" and "types" are essentially synonymous.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Another common type is "built-in functions"</span>
+<span class="nb">type</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>builtin_function_or_method</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">math</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;class 'module'&gt;
+&lt;class 'builtin_function_or_method'&gt;
+&lt;class 'float'&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>1.7320508075688772</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="-2.-Variables-"><span style="color:red"> 2. Variables </span><a class="anchor-link" href="#-2.-Variables-">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li><h3 id="We-usually-want-to-use-variables,-which-is-%22a-name-that-refers-to-a-value%22.">We usually want to use <strong>variables</strong>, which is "a name that refers to a value".<a class="anchor-link" href="#We-usually-want-to-use-variables,-which-is-%22a-name-that-refers-to-a-value%22.">¶</a></h3></li>
+<li><h3 id="Another-way-to-think-about-it:-a-variable-is-a-%22named-storage-location%22-where-we-save-values-for-later-use">Another way to think about it: a variable is a "named storage location" where we save values for later use<a class="anchor-link" href="#Another-way-to-think-about-it:-a-variable-is-a-%22named-storage-location%22-where-we-save-values-for-later-use">¶</a></h3></li>
+<li><h3 id="Variables-can-be-created-using-the-assignment-operator-%22=%22">Variables can be created using the <strong>assignment operator</strong> "="<a class="anchor-link" href="#Variables-can-be-created-using-the-assignment-operator-%22=%22">¶</a></h3></li>
+<li><h3 id="WARNING:-in-Python,-%22=%22-is-NOT-the-%22equals-sign%22.-It-is-the-assignment-operator"><strong>WARNING</strong>: in Python, "=" is NOT the "equals sign". It is the <strong>assignment operator</strong><a class="anchor-link" href="#WARNING:-in-Python,-%22=%22-is-NOT-the-%22equals-sign%22.-It-is-the-assignment-operator">¶</a></h3></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Put-your-hand-over-your-heart-and-repeat-these-words:-%22I-will-not-call-the-assignment-operator-an-equal-sign%22">Put your hand over your heart and repeat these words: "<strong>I will not call the assignment operator an equal sign</strong>"<a class="anchor-link" href="#Put-your-hand-over-your-heart-and-repeat-these-words:-%22I-will-not-call-the-assignment-operator-an-equal-sign%22">¶</a></h3><p>(Actually, it common to call it an "equal sign" when informally discussing code. I do this too, I am just trying to drive the point home)</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">3.25</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>3
+3.25
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="What-happened-in-the-above-code-cell?">What happened in the above code cell?<a class="anchor-link" href="#What-happened-in-the-above-code-cell?">¶</a></h2><h3 id="1.-We-took-the-built-in-number-3-(an-integer)-and-assigned-this-value-to-a-new-variable,-called-%22x%22">1. We took the built-in number 3 (an integer) and <strong>assigned</strong> this value to a new variable, called "x"<a class="anchor-link" href="#1.-We-took-the-built-in-number-3-(an-integer)-and-assigned-this-value-to-a-new-variable,-called-%22x%22">¶</a></h3><h3 id="2.-We-took-the-built-in-number-3.25-(a-float)-and-assigned-this-value-to-a-new-variable,-called-%22y%22">2. We took the built-in number 3.25 (a float) and <strong>assigned</strong> this value to a new variable, called "y"<a class="anchor-link" href="#2.-We-took-the-built-in-number-3.25-(a-float)-and-assigned-this-value-to-a-new-variable,-called-%22y%22">¶</a></h3><h4 id="Notice-I-did-not-say-'we-created-a-variable-called-%22x%22-and-gave-it-the-value-3'.-Everything-to-the-right-of-%22=%22-happens-first.">Notice I did <strong>not</strong> say 'we created a variable called "x" and gave it the value 3'. Everything to the right of "=" happens first.<a class="anchor-link" href="#Notice-I-did-not-say-'we-created-a-variable-called-%22x%22-and-gave-it-the-value-3'.-Everything-to-the-right-of-%22=%22-happens-first.">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># you can check the type of a variable after you define it:</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;class 'int'&gt;
+&lt;class 'float'&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Or,-you-can-click-%22Jupyter-Variables%22-in-the-top-panel-of-the-notebook-to-see-the-variables-that-have-been-created">Or, you can click "Jupyter Variables" in the top panel of the notebook to see the variables that have been created<a class="anchor-link" href="#Or,-you-can-click-%22Jupyter-Variables%22-in-the-top-panel-of-the-notebook-to-see-the-variables-that-have-been-created">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Consider the following block of code:</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">z</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+
+<span class="c1"># What do you think will be printed?</span>
+
+<span class="c1"># How should we interpret what happened?</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>13
+14
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="This-is-not-an-algebra-class,-we-do-not-have-to-call-our-variables-%22x,y,z,-etc.%22">This is not an algebra class, we do not have to call our variables "x,y,z, etc."<a class="anchor-link" href="#This-is-not-an-algebra-class,-we-do-not-have-to-call-our-variables-%22x,y,z,-etc.%22">¶</a></h3><ul>
+<li><h3 id="Variable-names-can-include-letters-(A-Z)-and-(a-z),-numbers-(0-9),-and-the-underscore-character-%22_%22">Variable names can include letters (A-Z) and (a-z), numbers (0-9), and the underscore character "_"<a class="anchor-link" href="#Variable-names-can-include-letters-(A-Z)-and-(a-z),-numbers-(0-9),-and-the-underscore-character-%22_%22">¶</a></h3></li>
+<li><h3 id="Variable-names-cannot-start-with-a-number">Variable names cannot start with a number<a class="anchor-link" href="#Variable-names-cannot-start-with-a-number">¶</a></h3></li>
+<li><h3 id="For-readable-code,-choose-descriptive-variable-names">For readable code, choose <strong>descriptive</strong> variable names<a class="anchor-link" href="#For-readable-code,-choose-descriptive-variable-names">¶</a></h3></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Question:-A-vinyl-record-costs-$32.99.-The-sales-tax-in-Fulton-County-is-8.9%25,-while-the-sales-tax-in-DeKalb-County-is-8%25.-How-much-more-would-you-pay-if-you-purchased-it-in-Fulton-county?">Question: A vinyl record costs $32.99. The sales tax in Fulton County is 8.9%, while the sales tax in DeKalb County is 8%. How much more would you pay if you purchased it in Fulton county?<a class="anchor-link" href="#Question:-A-vinyl-record-costs-$32.99.-The-sales-tax-in-Fulton-County-is-8.9%25,-while-the-sales-tax-in-DeKalb-County-is-8%25.-How-much-more-would-you-pay-if-you-purchased-it-in-Fulton-county?">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">record_price</span> <span class="o">=</span> <span class="mf">32.99</span>
+<span class="n">fulton_tax_rate</span> <span class="o">=</span> <span class="mf">0.089</span>
+<span class="n">dekalb_tax_rate</span> <span class="o">=</span> <span class="mf">0.08</span>
+
+<span class="n">fulton_cost</span> <span class="o">=</span> <span class="n">record_price</span> <span class="o">+</span> <span class="p">(</span><span class="n">record_price</span> <span class="o">*</span> <span class="n">fulton_tax_rate</span><span class="p">)</span>
+<span class="n">dekalb_cost</span> <span class="o">=</span> <span class="n">record_price</span> <span class="o">+</span> <span class="n">record_price</span> <span class="o">*</span> <span class="n">dekalb_tax_rate</span>
+
+<span class="n">price_difference</span> <span class="o">=</span> <span class="n">fulton_cost</span> <span class="o">-</span> <span class="n">dekalb_cost</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">price_difference</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>0.2969099999999969
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># When calculating the price after sales tax, stores typically round to the nearest cent.</span>
+
+<span class="n">record_price</span> <span class="o">=</span> <span class="mf">32.99</span>
+<span class="n">fulton_tax_rate</span> <span class="o">=</span> <span class="mf">0.089</span>
+<span class="n">dekalb_tax_rate</span> <span class="o">=</span> <span class="mf">0.08</span>
+
+<span class="n">fulton_cost</span> <span class="o">=</span> <span class="n">record_price</span> <span class="o">+</span> <span class="n">record_price</span> <span class="o">*</span> <span class="n">fulton_tax_rate</span>
+<span class="c1"># round to 2 decimal places</span>
+<span class="n">fulton_cost</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">fulton_cost</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> 
+
+<span class="n">dekalb_cost</span> <span class="o">=</span> <span class="n">record_price</span> <span class="o">+</span> <span class="n">record_price</span> <span class="o">*</span> <span class="n">dekalb_tax_rate</span>
+<span class="n">dekalb_cost</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">dekalb_cost</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># round to 2 decimal places</span>
+
+<span class="n">price_difference</span> <span class="o">=</span> <span class="n">fulton_cost</span> <span class="o">-</span> <span class="n">dekalb_cost</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">price_difference</span><span class="p">)</span> <span class="c1"># ?????</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>0.29999999999999716
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Python does all arithmetic in binary. </span>
+<span class="c1"># Some numbers can't be represented in binary without using infinitely many digits </span>
+<span class="c1"># Since computers don't have infinite memory...so we can't store them exactly. </span>
+
+<span class="c1"># This leads to some unexpected behavior...</span>
+<span class="mf">0.3</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>-5.551115123125783e-17</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Variables-do-not-have-to-be-numbers">Variables do not have to be numbers<a class="anchor-link" href="#Variables-do-not-have-to-be-numbers">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">first_name</span> <span class="o">=</span> <span class="s2">"Peter"</span>
+<span class="n">last_name</span> <span class="o">=</span> <span class="s1">'Sentz'</span>
+<span class="n">course</span> <span class="o">=</span> <span class="s2">"DATASCI 151 - Spring 2026"</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">first_name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">first_name</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Peter
+&lt;class 'str'&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Variables-are-case-sensitive.">Variables are case sensitive.<a class="anchor-link" href="#Variables-are-case-sensitive.">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Last_name</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7728,10 +8291,10 @@ the version of Python that contains the word "anaconda"</li>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[2]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span style="color: rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">log2</span>(<span class="ansi-green-fg">8</span>))
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[19]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span style="color: rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">Last_name</span>)
 
-<span class="ansi-red-fg">NameError</span>: name 'log2' is not defined</pre>
+<span class="ansi-red-fg">NameError</span>: name 'Last_name' is not defined</pre>
 </div>
 </div>
 </div>
@@ -7743,14 +8306,8 @@ the version of Python that contains the word "anaconda"</li>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p>(c) Import Modules (a.k.a. libraries):</p>
-<ul>
-<li>Jupyter notebooks launches with very basic options</li>
-<li>The "import" command adds modules to the working enviroment.</li>
-<li>Once imported, use "." to run subcommands contained in the module</li>
-</ul>
-</font></div>
+<h3 id="Must-refer-to-variables-exactly-as-they-were-defined">Must refer to variables <strong>exactly</strong> as they were defined<a class="anchor-link" href="#Must-refer-to-variables-exactly-as-they-were-defined">¶</a></h3>
+</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
@@ -7758,11 +8315,10 @@ the version of Python that contains the word "anaconda"</li>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">firstname</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7774,9 +8330,14 @@ the version of Python that contains the word "anaconda"</li>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>3.0
-</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[20]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span style="color: rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">firstname</span>)
+
+<span class="ansi-red-fg">NameError</span>: name 'firstname' is not defined</pre>
 </div>
 </div>
 </div>
@@ -7788,1209 +8349,7 @@ the version of Python that contains the word "anaconda"</li>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Let's-import-the-%22statistics%22-module">Let's import the "statistics" module<a class="anchor-link" href="#Let's-import-the-%22statistics%22-module">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">statistics</span><span class="o">.</span><span class="n">median</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">statistics</span><span class="o">.</span><span class="n">geometric_mean</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">]))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>5.428571428571429
-5
-3.795163026589841
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p>(d) Import Packages with nicknames:</p>
-<ul>
-<li>Typing "statistics" every single time you use that package can be a pain</li>
-<li>To create nice plots, we will be using <code>matplotlib.pyplot</code> - long name!</li>
-<li>Luckily, we can give the libraries a nickname with "as"</li>
-<li>We will also use <code>pandas</code> - library for working with datasets</li>
-</ul>
-</font></div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># This cell is a code cell. But adding "#" at the start of a line makes it a comment.</span>
-<span class="c1"># Comments are ignored by Python, but are useful for humans to understand the code.</span>
-
-<span class="c1"># Notes about nicknames:</span>
-<span class="c1"># - Import "statistics", but give it the nickname "stats"</span>
-<span class="c1"># - "matplotlib.pyplot" is a long name. Let's call it "plt"</span>
-<span class="c1"># - Similarly, let's import "pandas" as "pd"</span>
-<span class="c1"># - To avoid errors, be consistent with your nicknames</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">stats</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">]))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>5.428571428571429
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p>(e) Open datasets</p>
-<p>Run the command "read_csv" from the library <br/>
-"pandas" (nicknamed "pd").</p>
-</font></div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># The subcommand "read_csv()" opens the file in parenthesis.</span>
-<span class="c1"># We use the "=" symbol to store the dataset in the working environment under the name "carfeatures"</span>
-
-<span class="n">carfeatures</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/features.csv"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p>You can open the datasets in the current environment</p>
-<ul>
-<li>Click on the "Jupyter Variables" button in the top bar to open a panel</li>
-</ul>
-<p><img alt="drawing" src="figures/topbar.png" width="650"/></p>
-<ul>
-<li>Click on the icon to the left of "carfeatures" in the "Jupyter: Variables" tab</li>
-</ul>
-<p><img alt="drawing" src="figures/jupyter_var.png" width="700"/></p>
-<p>DataWrangler will open a window showing the data</p>
-<ul>
-<li>Each row is an observation (a car)</li>
-<li>Each column is the value of a variable (a feature of that car)</li>
-</ul>
-</font></div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<hr/>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="-STEP-2:-Run-Analyses-"><span style="color:darkblue"> STEP 2: Run Analyses </span><a class="anchor-link" href="#-STEP-2:-Run-Analyses-">¶</a></h1><font size="5">
-<p>Output data for all the columns</p>
-</font></div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Entering the name of a dataframe produces an output with some rows</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">carfeatures</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>mpg</th>
-<th>cylinders</th>
-<th>displacement</th>
-<th>horsepower</th>
-<th>weight</th>
-<th>acceleration</th>
-<th>vehicle id</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>18.0</td>
-<td>8</td>
-<td>307</td>
-<td>130</td>
-<td>3504</td>
-<td>12.0</td>
-<td>C-1689780</td>
-</tr>
-<tr>
-<th>1</th>
-<td>15.0</td>
-<td>8</td>
-<td>350</td>
-<td>165</td>
-<td>3693</td>
-<td>11.5</td>
-<td>B-1689791</td>
-</tr>
-<tr>
-<th>2</th>
-<td>18.0</td>
-<td>8</td>
-<td>318</td>
-<td>150</td>
-<td>3436</td>
-<td>11.0</td>
-<td>P-1689802</td>
-</tr>
-<tr>
-<th>3</th>
-<td>16.0</td>
-<td>8</td>
-<td>304</td>
-<td>150</td>
-<td>3433</td>
-<td>12.0</td>
-<td>A-1689813</td>
-</tr>
-<tr>
-<th>4</th>
-<td>17.0</td>
-<td>8</td>
-<td>302</td>
-<td>140</td>
-<td>3449</td>
-<td>10.5</td>
-<td>F-1689824</td>
-</tr>
-<tr>
-<th>...</th>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr>
-<th>393</th>
-<td>27.0</td>
-<td>4</td>
-<td>140</td>
-<td>86</td>
-<td>2790</td>
-<td>15.6</td>
-<td>F-1694103</td>
-</tr>
-<tr>
-<th>394</th>
-<td>44.0</td>
-<td>4</td>
-<td>97</td>
-<td>52</td>
-<td>2130</td>
-<td>24.6</td>
-<td>V-1694114</td>
-</tr>
-<tr>
-<th>395</th>
-<td>32.0</td>
-<td>4</td>
-<td>135</td>
-<td>84</td>
-<td>2295</td>
-<td>11.6</td>
-<td>D-1694125</td>
-</tr>
-<tr>
-<th>396</th>
-<td>28.0</td>
-<td>4</td>
-<td>120</td>
-<td>79</td>
-<td>2625</td>
-<td>18.6</td>
-<td>F-1694136</td>
-</tr>
-<tr>
-<th>397</th>
-<td>31.0</td>
-<td>4</td>
-<td>119</td>
-<td>82</td>
-<td>2720</td>
-<td>19.4</td>
-<td>C-1694147</td>
-</tr>
-</tbody>
-</table>
-<p>398 rows × 7 columns</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p>Output data for a single column 'cylinders'</p>
-</font></div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># We use square brackets [...] to subset information from data </span>
-<span class="c1"># Text/strings have to be written in quotation marks</span>
-<span class="c1"># This command extracts the column 'cylinders'</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">carfeatures</span><span class="p">[</span><span class="s1">'cylinders'</span><span class="p">])</span>
-
-<span class="c1"># double quotes would also have been fine</span>
-<span class="c1"># display(carfeatures["cylinders"])</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>0      8
-1      8
-2      8
-3      8
-4      8
-      ..
-393    4
-394    4
-395    4
-396    4
-397    4
-Name: cylinders, Length: 398, dtype: int64</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p>Example: Compute a frequency table (a type of "cross-tabulation")</p>
-</font></div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># crosstab counts how many rows fall into categories</span>
-<span class="c1"># "index" is the category</span>
-<span class="c1"># "columns" is a custom title</span>
-
-<span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="n">carfeatures</span><span class="p">[</span><span class="s1">'cylinders'</span><span class="p">],</span><span class="n">columns</span> <span class="o">=</span> <span class="s2">"count"</span><span class="p">)</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th>col_0</th>
-<th>count</th>
-</tr>
-<tr>
-<th>cylinders</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>3</th>
-<td>4</td>
-</tr>
-<tr>
-<th>4</th>
-<td>204</td>
-</tr>
-<tr>
-<th>5</th>
-<td>3</td>
-</tr>
-<tr>
-<th>6</th>
-<td>84</td>
-</tr>
-<tr>
-<th>8</th>
-<td>103</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="The-%22help%22-keyword-can-be-used-to-learn-more-about-a-command">The "help" keyword can be used to learn more about a command<a class="anchor-link" href="#The-%22help%22-keyword-can-be-used-to-learn-more-about-a-command">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">help</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Help on function crosstab in module pandas.core.reshape.pivot:
-
-crosstab(
-    index,
-    columns,
-    values=None,
-    rownames=None,
-    colnames=None,
-    aggfunc=None,
-    margins: 'bool' = False,
-    margins_name: 'Hashable' = 'All',
-    dropna: 'bool' = True,
-    normalize: "bool | Literal[0, 1, 'all', 'index', 'columns']" = False
-) -&gt; 'DataFrame'
-    Compute a simple cross tabulation of two (or more) factors.
-
-    By default, computes a frequency table of the factors unless an
-    array of values and an aggregation function are passed.
-
-    Parameters
-    ----------
-    index : array-like, Series, or list of arrays/Series
-        Values to group by in the rows.
-    columns : array-like, Series, or list of arrays/Series
-        Values to group by in the columns.
-    values : array-like, optional
-        Array of values to aggregate according to the factors.
-        Requires `aggfunc` be specified.
-    rownames : sequence, default None
-        If passed, must match number of row arrays passed.
-    colnames : sequence, default None
-        If passed, must match number of column arrays passed.
-    aggfunc : function, optional
-        If specified, requires `values` be specified as well.
-    margins : bool, default False
-        Add row/column margins (subtotals).
-    margins_name : str, default 'All'
-        Name of the row/column that will contain the totals
-        when margins is True.
-    dropna : bool, default True
-        Do not include columns whose entries are all NaN.
-    normalize : bool, {'all', 'index', 'columns'}, or {0,1}, default False
-        Normalize by dividing all values by the sum of values.
-
-        - If passed 'all' or `True`, will normalize over all values.
-        - If passed 'index' will normalize over each row.
-        - If passed 'columns' will normalize over each column.
-        - If margins is `True`, will also normalize margin values.
-
-    Returns
-    -------
-    DataFrame
-        Cross tabulation of the data.
-
-    See Also
-    --------
-    DataFrame.pivot : Reshape data based on column values.
-    pivot_table : Create a pivot table as a DataFrame.
-
-    Notes
-    -----
-    Any Series passed will have their name attributes used unless row or column
-    names for the cross-tabulation are specified.
-
-    Any input passed containing Categorical data will have **all** of its
-    categories included in the cross-tabulation, even if the actual data does
-    not contain any instances of a particular category.
-
-    In the event that there aren't overlapping indexes an empty DataFrame will
-    be returned.
-
-    Reference :ref:`the user guide &lt;reshaping.crosstabulations&gt;` for more examples.
-
-    Examples
-    --------
-    &gt;&gt;&gt; a = np.array(["foo", "foo", "foo", "foo", "bar", "bar",
-    ...               "bar", "bar", "foo", "foo", "foo"], dtype=object)
-    &gt;&gt;&gt; b = np.array(["one", "one", "one", "two", "one", "one",
-    ...               "one", "two", "two", "two", "one"], dtype=object)
-    &gt;&gt;&gt; c = np.array(["dull", "dull", "shiny", "dull", "dull", "shiny",
-    ...               "shiny", "dull", "shiny", "shiny", "shiny"],
-    ...              dtype=object)
-    &gt;&gt;&gt; pd.crosstab(a, [b, c], rownames=['a'], colnames=['b', 'c'])
-    b   one        two
-    c   dull shiny dull shiny
-    a
-    bar    1     2    1     0
-    foo    2     2    1     2
-
-    Here 'c' and 'f' are not represented in the data and will not be
-    shown in the output because dropna is True by default. Set
-    dropna=False to preserve categories with no data.
-
-    &gt;&gt;&gt; foo = pd.Categorical(['a', 'b'], categories=['a', 'b', 'c'])
-    &gt;&gt;&gt; bar = pd.Categorical(['d', 'e'], categories=['d', 'e', 'f'])
-    &gt;&gt;&gt; pd.crosstab(foo, bar)
-    col_0  d  e
-    row_0
-    a      1  0
-    b      0  1
-    &gt;&gt;&gt; pd.crosstab(foo, bar, dropna=False)
-    col_0  d  e  f
-    row_0
-    a      1  0  0
-    b      0  1  0
-    c      0  0  0
-
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># It looks like the first two arguments are "index" and "columns", which are required. The rest are optional.</span>
-<span class="c1"># So we can also write the command like this:</span>
-
-<span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">carfeatures</span><span class="p">[</span><span class="s1">'cylinders'</span><span class="p">],</span> <span class="s2">"count"</span><span class="p">)</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th>col_0</th>
-<th>count</th>
-</tr>
-<tr>
-<th>cylinders</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>3</th>
-<td>4</td>
-</tr>
-<tr>
-<th>4</th>
-<td>204</td>
-</tr>
-<tr>
-<th>5</th>
-<td>3</td>
-</tr>
-<tr>
-<th>6</th>
-<td>84</td>
-</tr>
-<tr>
-<th>8</th>
-<td>103</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="We-can-also-cross-tabulate-between-two-columns-of-carfeatures:">We can also cross-tabulate between two columns of carfeatures:<a class="anchor-link" href="#We-can-also-cross-tabulate-between-two-columns-of-carfeatures:">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">table_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="n">carfeatures</span><span class="p">[</span><span class="s1">'cylinders'</span><span class="p">],</span><span class="n">columns</span> <span class="o">=</span> <span class="n">carfeatures</span><span class="p">[</span><span class="s1">'mpg'</span><span class="p">])</span>
-<span class="n">display</span><span class="p">(</span><span class="n">table_2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th>mpg</th>
-<th>9.0</th>
-<th>10.0</th>
-<th>11.0</th>
-<th>12.0</th>
-<th>13.0</th>
-<th>14.0</th>
-<th>14.5</th>
-<th>15.0</th>
-<th>15.5</th>
-<th>16.0</th>
-<th>...</th>
-<th>39.4</th>
-<th>40.8</th>
-<th>40.9</th>
-<th>41.5</th>
-<th>43.1</th>
-<th>43.4</th>
-<th>44.0</th>
-<th>44.3</th>
-<th>44.6</th>
-<th>46.6</th>
-</tr>
-<tr>
-<th>cylinders</th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>3</th>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>...</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<th>4</th>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>...</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<th>5</th>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>...</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<th>6</th>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>4</td>
-<td>0</td>
-<td>5</td>
-<td>...</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<th>8</th>
-<td>1</td>
-<td>2</td>
-<td>4</td>
-<td>6</td>
-<td>20</td>
-<td>19</td>
-<td>1</td>
-<td>12</td>
-<td>5</td>
-<td>8</td>
-<td>...</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<p>5 rows × 129 columns</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p>Example: Compute basic summary statistics for all variables</p>
-</font></div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># "describe" computes the count, mean, std, min, 25% quantile, 50%, 75%, max</span>
-<span class="c1"># automatically excludes variables with text values</span>
-<span class="c1"># otherwise includes all numeric variables</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">carfeatures</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>mpg</th>
-<th>cylinders</th>
-<th>displacement</th>
-<th>weight</th>
-<th>acceleration</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>count</th>
-<td>398.000000</td>
-<td>398.000000</td>
-<td>398.000000</td>
-<td>398.000000</td>
-<td>398.000000</td>
-</tr>
-<tr>
-<th>mean</th>
-<td>23.514573</td>
-<td>5.454774</td>
-<td>193.427136</td>
-<td>2970.424623</td>
-<td>15.568090</td>
-</tr>
-<tr>
-<th>std</th>
-<td>7.815984</td>
-<td>1.701004</td>
-<td>104.268683</td>
-<td>846.841774</td>
-<td>2.757689</td>
-</tr>
-<tr>
-<th>min</th>
-<td>9.000000</td>
-<td>3.000000</td>
-<td>68.000000</td>
-<td>1613.000000</td>
-<td>8.000000</td>
-</tr>
-<tr>
-<th>25%</th>
-<td>17.500000</td>
-<td>4.000000</td>
-<td>104.250000</td>
-<td>2223.750000</td>
-<td>13.825000</td>
-</tr>
-<tr>
-<th>50%</th>
-<td>23.000000</td>
-<td>4.000000</td>
-<td>148.500000</td>
-<td>2803.500000</td>
-<td>15.500000</td>
-</tr>
-<tr>
-<th>75%</th>
-<td>29.000000</td>
-<td>8.000000</td>
-<td>262.000000</td>
-<td>3608.000000</td>
-<td>17.175000</td>
-</tr>
-<tr>
-<th>max</th>
-<td>46.600000</td>
-<td>8.000000</td>
-<td>455.000000</td>
-<td>5140.000000</td>
-<td>24.800000</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p>For readability, you might want to round to two digits</p>
-</font></div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">carfeatures</span><span class="o">.</span><span class="n">describe</span><span class="p">(),</span> <span class="mi">2</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>mpg</th>
-<th>cylinders</th>
-<th>displacement</th>
-<th>weight</th>
-<th>acceleration</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>count</th>
-<td>398.00</td>
-<td>398.00</td>
-<td>398.00</td>
-<td>398.00</td>
-<td>398.00</td>
-</tr>
-<tr>
-<th>mean</th>
-<td>23.51</td>
-<td>5.45</td>
-<td>193.43</td>
-<td>2970.42</td>
-<td>15.57</td>
-</tr>
-<tr>
-<th>std</th>
-<td>7.82</td>
-<td>1.70</td>
-<td>104.27</td>
-<td>846.84</td>
-<td>2.76</td>
-</tr>
-<tr>
-<th>min</th>
-<td>9.00</td>
-<td>3.00</td>
-<td>68.00</td>
-<td>1613.00</td>
-<td>8.00</td>
-</tr>
-<tr>
-<th>25%</th>
-<td>17.50</td>
-<td>4.00</td>
-<td>104.25</td>
-<td>2223.75</td>
-<td>13.82</td>
-</tr>
-<tr>
-<th>50%</th>
-<td>23.00</td>
-<td>4.00</td>
-<td>148.50</td>
-<td>2803.50</td>
-<td>15.50</td>
-</tr>
-<tr>
-<th>75%</th>
-<td>29.00</td>
-<td>8.00</td>
-<td>262.00</td>
-<td>3608.00</td>
-<td>17.18</td>
-</tr>
-<tr>
-<th>max</th>
-<td>46.60</td>
-<td>8.00</td>
-<td>455.00</td>
-<td>5140.00</td>
-<td>24.80</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<h3 id="There-are-many-other-types-besides-numbers-and-strings">There are many other types besides numbers and strings<a class="anchor-link" href="#There-are-many-other-types-besides-numbers-and-strings">¶</a></h3>
 </div>
 </div>
 </div>
@@ -9002,7 +8361,10 @@ crosstab(
 <div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">carfeatures</span><span class="o">.</span><span class="n">describe</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">car_features</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data_lec4/features.csv'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">car_features</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -9015,243 +8377,7 @@ crosstab(
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Help on method describe in module pandas.core.generic:
-
-describe(percentiles=None, include=None, exclude=None) -&gt; 'Self' method of pandas.core.frame.DataFrame instance
-    Generate descriptive statistics.
-
-    Descriptive statistics include those that summarize the central
-    tendency, dispersion and shape of a
-    dataset's distribution, excluding ``NaN`` values.
-
-    Analyzes both numeric and object series, as well
-    as ``DataFrame`` column sets of mixed data types. The output
-    will vary depending on what is provided. Refer to the notes
-    below for more detail.
-
-    Parameters
-    ----------
-    percentiles : list-like of numbers, optional
-        The percentiles to include in the output. All should
-        fall between 0 and 1. The default is
-        ``[.25, .5, .75]``, which returns the 25th, 50th, and
-        75th percentiles.
-    include : 'all', list-like of dtypes or None (default), optional
-        A white list of data types to include in the result. Ignored
-        for ``Series``. Here are the options:
-
-        - 'all' : All columns of the input will be included in the output.
-        - A list-like of dtypes : Limits the results to the
-          provided data types.
-          To limit the result to numeric types submit
-          ``numpy.number``. To limit it instead to object columns submit
-          the ``numpy.object`` data type. Strings
-          can also be used in the style of
-          ``select_dtypes`` (e.g. ``df.describe(include=['O'])``). To
-          select pandas categorical columns, use ``'category'``
-        - None (default) : The result will include all numeric columns.
-    exclude : list-like of dtypes or None (default), optional,
-        A black list of data types to omit from the result. Ignored
-        for ``Series``. Here are the options:
-
-        - A list-like of dtypes : Excludes the provided data types
-          from the result. To exclude numeric types submit
-          ``numpy.number``. To exclude object columns submit the data
-          type ``numpy.object``. Strings can also be used in the style of
-          ``select_dtypes`` (e.g. ``df.describe(exclude=['O'])``). To
-          exclude pandas categorical columns, use ``'category'``
-        - None (default) : The result will exclude nothing.
-
-    Returns
-    -------
-    Series or DataFrame
-        Summary statistics of the Series or Dataframe provided.
-
-    See Also
-    --------
-    DataFrame.count: Count number of non-NA/null observations.
-    DataFrame.max: Maximum of the values in the object.
-    DataFrame.min: Minimum of the values in the object.
-    DataFrame.mean: Mean of the values.
-    DataFrame.std: Standard deviation of the observations.
-    DataFrame.select_dtypes: Subset of a DataFrame including/excluding
-        columns based on their dtype.
-
-    Notes
-    -----
-    For numeric data, the result's index will include ``count``,
-    ``mean``, ``std``, ``min``, ``max`` as well as lower, ``50`` and
-    upper percentiles. By default the lower percentile is ``25`` and the
-    upper percentile is ``75``. The ``50`` percentile is the
-    same as the median.
-
-    For object data (e.g. strings or timestamps), the result's index
-    will include ``count``, ``unique``, ``top``, and ``freq``. The ``top``
-    is the most common value. The ``freq`` is the most common value's
-    frequency. Timestamps also include the ``first`` and ``last`` items.
-
-    If multiple object values have the highest count, then the
-    ``count`` and ``top`` results will be arbitrarily chosen from
-    among those with the highest count.
-
-    For mixed data types provided via a ``DataFrame``, the default is to
-    return only an analysis of numeric columns. If the dataframe consists
-    only of object and categorical data without any numeric columns, the
-    default is to return an analysis of both the object and categorical
-    columns. If ``include='all'`` is provided as an option, the result
-    will include a union of attributes of each type.
-
-    The `include` and `exclude` parameters can be used to limit
-    which columns in a ``DataFrame`` are analyzed for the output.
-    The parameters are ignored when analyzing a ``Series``.
-
-    Examples
-    --------
-    Describing a numeric ``Series``.
-
-    &gt;&gt;&gt; s = pd.Series([1, 2, 3])
-    &gt;&gt;&gt; s.describe()
-    count    3.0
-    mean     2.0
-    std      1.0
-    min      1.0
-    25%      1.5
-    50%      2.0
-    75%      2.5
-    max      3.0
-    dtype: float64
-
-    Describing a categorical ``Series``.
-
-    &gt;&gt;&gt; s = pd.Series(['a', 'a', 'b', 'c'])
-    &gt;&gt;&gt; s.describe()
-    count     4
-    unique    3
-    top       a
-    freq      2
-    dtype: object
-
-    Describing a timestamp ``Series``.
-
-    &gt;&gt;&gt; s = pd.Series([
-    ...     np.datetime64("2000-01-01"),
-    ...     np.datetime64("2010-01-01"),
-    ...     np.datetime64("2010-01-01")
-    ... ])
-    &gt;&gt;&gt; s.describe()
-    count                      3
-    mean     2006-09-01 08:00:00
-    min      2000-01-01 00:00:00
-    25%      2004-12-31 12:00:00
-    50%      2010-01-01 00:00:00
-    75%      2010-01-01 00:00:00
-    max      2010-01-01 00:00:00
-    dtype: object
-
-    Describing a ``DataFrame``. By default only numeric fields
-    are returned.
-
-    &gt;&gt;&gt; df = pd.DataFrame({'categorical': pd.Categorical(['d', 'e', 'f']),
-    ...                    'numeric': [1, 2, 3],
-    ...                    'object': ['a', 'b', 'c']
-    ...                    })
-    &gt;&gt;&gt; df.describe()
-           numeric
-    count      3.0
-    mean       2.0
-    std        1.0
-    min        1.0
-    25%        1.5
-    50%        2.0
-    75%        2.5
-    max        3.0
-
-    Describing all columns of a ``DataFrame`` regardless of data type.
-
-    &gt;&gt;&gt; df.describe(include='all')  # doctest: +SKIP
-           categorical  numeric object
-    count            3      3.0      3
-    unique           3      NaN      3
-    top              f      NaN      a
-    freq             1      NaN      1
-    mean           NaN      2.0    NaN
-    std            NaN      1.0    NaN
-    min            NaN      1.0    NaN
-    25%            NaN      1.5    NaN
-    50%            NaN      2.0    NaN
-    75%            NaN      2.5    NaN
-    max            NaN      3.0    NaN
-
-    Describing a column from a ``DataFrame`` by accessing it as
-    an attribute.
-
-    &gt;&gt;&gt; df.numeric.describe()
-    count    3.0
-    mean     2.0
-    std      1.0
-    min      1.0
-    25%      1.5
-    50%      2.0
-    75%      2.5
-    max      3.0
-    Name: numeric, dtype: float64
-
-    Including only numeric columns in a ``DataFrame`` description.
-
-    &gt;&gt;&gt; df.describe(include=[np.number])
-           numeric
-    count      3.0
-    mean       2.0
-    std        1.0
-    min        1.0
-    25%        1.5
-    50%        2.0
-    75%        2.5
-    max        3.0
-
-    Including only string columns in a ``DataFrame`` description.
-
-    &gt;&gt;&gt; df.describe(include=[object])  # doctest: +SKIP
-           object
-    count       3
-    unique      3
-    top         a
-    freq        1
-
-    Including only categorical columns from a ``DataFrame`` description.
-
-    &gt;&gt;&gt; df.describe(include=['category'])
-           categorical
-    count            3
-    unique           3
-    top              d
-    freq             1
-
-    Excluding numeric columns from a ``DataFrame`` description.
-
-    &gt;&gt;&gt; df.describe(exclude=[np.number])  # doctest: +SKIP
-           categorical object
-    count            3      3
-    unique           3      3
-    top              f      a
-    freq             1      1
-
-    Excluding object columns from a ``DataFrame`` description.
-
-    &gt;&gt;&gt; df.describe(exclude=[object])  # doctest: +SKIP
-           categorical  numeric
-    count            3      3.0
-    unique           3      NaN
-    top              f      NaN
-    freq             1      NaN
-    mean           NaN      2.0
-    std            NaN      1.0
-    min            NaN      1.0
-    25%            NaN      1.5
-    50%            NaN      2.0
-    75%            NaN      2.5
-    max            NaN      3.0
-
+<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
 </pre>
 </div>
 </div>
@@ -9264,35 +8390,11 @@ describe(percentiles=None, include=None, exclude=None) -&gt; 'Self' method of pa
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p><strong>Q</strong>: How should I change the line of code so that it prints out the 33% and 66% percentile, instead of 25% and 75%?</p>
-</font></div>
+<h1 id="-3.-Intro-to-Lists-"><span style="color:red"> 3. Intro to Lists </span><a class="anchor-link" href="#-3.-Intro-to-Lists-">¶</a></h1><h3 id="We-often-want-to-store-multiple-objects-inside-a-single-named-location.">We often want to store multiple objects inside a single named location.<a class="anchor-link" href="#We-often-want-to-store-multiple-objects-inside-a-single-named-location.">¶</a></h3><h3 id="We-can-do-so-by-creating-%22lists%22">We can do so by creating "lists"<a class="anchor-link" href="#We-can-do-so-by-creating-%22lists%22">¶</a></h3><ul>
+<li><h4 id="Lists-are-always-created-using-square-brackets-%5B...%5D">Lists are always created using square brackets [...]<a class="anchor-link" href="#Lists-are-always-created-using-square-brackets-%5B...%5D">¶</a></h4></li>
+<li><h4 id="The-elements-(items)-of-the-list-are-separated-by-commas">The elements (items) of the list are separated by commas<a class="anchor-link" href="#The-elements-(items)-of-the-list-are-separated-by-commas">¶</a></h4></li>
+</ul>
 </div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># your code here </span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p>Example: Display a scatter plot</p>
-</font></div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
@@ -9300,11 +8402,16 @@ describe(percentiles=None, include=None, exclude=None) -&gt; 'Self' method of pa
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">carfeatures</span><span class="p">[</span><span class="s1">'weight'</span><span class="p">],</span> <span class="n">y</span> <span class="o">=</span> <span class="n">carfeatures</span><span class="p">[</span><span class="s1">'mpg'</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Let's make a list of some of our favorite movies (as strings)</span>
+
+
+<span class="n">favorite_movies</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Rear Window"</span><span class="p">,</span> <span class="s2">"Inception"</span><span class="p">,</span> <span class="s2">"Dead Poet Society"</span><span class="p">,</span> <span class="s2">"Baby Driver"</span><span class="p">,</span> <span class="s2">"Evil Dead (2013 remake)"</span><span class="p">]</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -9316,8 +8423,9 @@ describe(percentiles=None, include=None, exclude=None) -&gt; 'Self' method of pa
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
-<img alt="No description has been provided for this image" class="" src="data:image/png;base64,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"/>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;class 'list'&gt;
+</pre>
 </div>
 </div>
 </div>
@@ -9329,9 +8437,272 @@ describe(percentiles=None, include=None, exclude=None) -&gt; 'Self' method of pa
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<p><strong>Q</strong>: Is this a good plot?</p>
-</font></div>
+<h3 id="We-can-also-count-how-many-elements-are-in-a-list,-by-using-the-%22len%22-(length)-function">We can also count how many elements are in a list, by using the "len" (length) function<a class="anchor-link" href="#We-can-also-count-how-many-elements-are-in-a-list,-by-using-the-%22len%22-(length)-function">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>5
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>['Rear Window', 'Inception', 'Dead Poet Society', 'Baby Driver', 'Evil Dead (2013 remake)']
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Accessing-individual-elements-from-a-list">Accessing individual elements from a list<a class="anchor-link" href="#Accessing-individual-elements-from-a-list">¶</a></h2><ul>
+<li><h4 id="Use-square-brackets,-e.g.-favorite_movies_lec_1%5B2%5D">Use square brackets, e.g. favorite_movies_lec_1[2]<a class="anchor-link" href="#Use-square-brackets,-e.g.-favorite_movies_lec_1%5B2%5D">¶</a></h4></li>
+<li><h4 id="Python-lists-always-start-at-the-ZERO-position">Python lists always start at the <strong>ZERO</strong> position<a class="anchor-link" href="#Python-lists-always-start-at-the-ZERO-position">¶</a></h4></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">)</span> <span class="c1"># print whole list</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># print the first element (element zero)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>['Rear Window', 'Inception', 'Dead Poet Society', 'Baby Driver', 'Evil Dead (2013 remake)']
+Rear Window
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">)</span> <span class="c1"># print whole list</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># print the second element (element 1)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>['Rear Window', 'Inception', 'Dead Poet Society', 'Baby Driver', 'Evil Dead (2013 remake)']
+Inception
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="It-is-often-convenient-to-save-an-index-to-a-named-variable...you-can-use-this-variable-to-access-the-corresponding-element-of-the-list">It is often convenient to save an index to a named variable...you can use this variable to access the corresponding element of the list<a class="anchor-link" href="#It-is-often-convenient-to-save-an-index-to-a-named-variable...you-can-use-this-variable-to-access-the-corresponding-element-of-the-list">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">alec_ind</span> <span class="o">=</span> <span class="mi">2</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">[</span><span class="n">alec_ind</span><span class="p">])</span>
+
+<span class="n">alec_fav_movie</span> <span class="o">=</span> <span class="n">favorite_movies</span><span class="p">[</span><span class="n">alec_ind</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alec_fav_movie</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Dead Poet Society
+Dead Poet Society
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="What-if-we-want-to-change-one-of-the-elements-in-the-list?">What if we want to change one of the elements in the list?<a class="anchor-link" href="#What-if-we-want-to-change-one-of-the-elements-in-the-list?">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">)</span> <span class="c1"># entire list before assinging new string to element 4</span>
+<span class="n">favorite_movies</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"The Wailing"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">)</span> <span class="c1"># ...and after changing element 4</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>['Rear Window', 'Inception', 'Dead Poet Society', 'Baby Driver', 'Evil Dead (2013 remake)']
+['Rear Window', 'Inception', 'Dead Poet Society', 'Baby Driver', 'The Wailing']
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Lists-can-contain-objects-of-different-types---and-you-can-place-values-from-existing-variables-too">Lists can contain objects of different types - and you can place values from existing variables too<a class="anchor-link" href="#Lists-can-contain-objects-of-different-types---and-you-can-place-values-from-existing-variables-too">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="mf">12.1</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="s2">"DATASCI 151"</span><span class="p">,</span> <span class="mf">3.3</span><span class="p">,</span> <span class="s2">"Statistical Computing II"</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="s1">'q'</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[2, 0.1, -2, 'DATASCI 151', 3.3, 'Statistical Computing II', 12.1, 'q']
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="You-can-even-have-a-list-where-one-of-the-elements-is-itself-a-list">You can even have a list where one of the elements is itself a list<a class="anchor-link" href="#You-can-even-have-a-list-where-one-of-the-elements-is-itself-a-list">¶</a></h3>
+</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
@@ -9342,12 +8713,71 @@ describe(percentiles=None, include=None, exclude=None) -&gt; 'Self' method of pa
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Try another scatter plot with x = "acceleration"</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">peters_favorite_movie</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Evil Dead (2013 remake)"</span><span class="p">,</span> <span class="s2">"The Wailing"</span><span class="p">,</span> <span class="s2">"Mulholland Drive"</span><span class="p">,</span> <span class="s2">"Pulp Fiction"</span><span class="p">,</span> <span class="s2">"2001: A Space Odyssey"</span><span class="p">]</span>
+
+<span class="c1"># overwrite the string "The Wailing" with an entire list!</span>
+<span class="n">favorite_movies</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">peters_favorite_movie</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">))</span> <span class="c1"># still has 5 elements</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>5
+['Rear Window', 'Inception', 'Dead Poet Society', 'Baby Driver', ['Evil Dead (2013 remake)', 'The Wailing', 'Mulholland Drive', 'Pulp Fiction', '2001: A Space Odyssey']]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span> <span class="c1"># element 4 is now a list, which contains 5 elements of its own</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>['Evil Dead (2013 remake)', 'The Wailing', 'Mulholland Drive', 'Pulp Fiction', '2001: A Space Odyssey']
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -9355,41 +8785,80 @@ describe(percentiles=None, include=None, exclude=None) -&gt; 'Self' method of pa
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1><span style="color:darkblue"> Pro Tips: How to be a great student for DATASCI 151?</span></h1>
+<h3 id="We-can-also-extract-items-from-the-%22sublist%22-using-double-indexing">We can also extract items from the "sublist" using double indexing<a class="anchor-link" href="#We-can-also-extract-items-from-the-%22sublist%22-using-double-indexing">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Grab element 4 from favorite_movies, which is a list</span>
+<span class="c1"># Then grab element 2 from that "sub-list" which is a string</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">favorite_movies</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Mulholland Drive
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<font size="4">
+<p>Next lecture, we will see that strings have some similar properties to lists...</p>
+</font></div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">first_name</span> <span class="o">=</span> <span class="s2">"Peter"</span>
 
-<font size="5">
-<ul>
-<li><p>Ask clarifying questions, e.g.</p>
-<ul>
-<li>Can you explain what this command is doing? --&gt; <strong>I don't mind repeating an explanation!</strong></li>
-<li>What are the arguments of this function?</li>
-<li>What is the output?</li>
-<li>I get an error saying .... (be explicit), what could be the issue?</li>
-</ul>
-</li>
-</ul>
-</font></div>
+<span class="nb">print</span><span class="p">(</span><span class="n">first_name</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">first_name</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<ul>
-<li><p>Remember that good coders ...</p>
-<ul>
-<li>build up their toolkit of commands over time</li>
-<li>understand that errors are normal the first time you run a command</li>
-<li><strong>learn to use online websites to interpret errors!!</strong>, <a href="https://stackoverflow.com/questions/tagged/python">https://stackoverflow.com/questions/tagged/python</a></li>
-<li>search help pages to find proper syntax, e.g. <a href="https://www.w3schools.com/python/">https://www.w3schools.com/python/</a></li>
-</ul>
-</li>
-</ul>
-</font></div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>P
+e
+</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -9399,37 +8868,8 @@ describe(percentiles=None, include=None, exclude=None) -&gt; 'Self' method of pa
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<ul>
-<li><p>Experiment</p>
-<ul>
-<li>If we do analyses for variable "A", try it for "B"</li>
-<li>Search online how to do something extra, e.g. change the color of a scatter plot</li>
-<li>Try running the syntax deliberately wrong: helps you get more familiar with error messages</li>
-<li>Think long term: Figuring out a puzzle today, means that you can use the code for the next time!</li>
-</ul>
-</li>
-</ul>
-</font></div>
+<h2 id=""><a class="anchor-link" href="#">¶</a></h2>
 </div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<font size="5">
-<ul>
-<li><p>Come to office hours</p>
-<ul>
-<li>Best time for a one-on-one!</li>
-<li>Good place to ask about topics not covered in the lecture</li>
-</ul>
-</li>
-</ul>
-</font></div>
 </div>
 </div>
 </div>
